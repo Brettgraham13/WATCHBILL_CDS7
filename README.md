@@ -1,5 +1,7 @@
 # Watchbill CDS7
 
+WATCHBILL_CDS7 is a Python-based tool for managing, generating, and evaluating organizational watchbills. It automates the assignment of day and night watches, tracks personnel availability, and enforces custom rules and constraints (such as leave, special liberty, and fair distribution of watches). The project integrates with Excel workbooks for data input and output, and provides utilities for analyzing watch statistics, generating monthly duty vectors, and ensuring compliance with operational requirements.
+
 A Python project for managing watchbills.
 
 ## Setup
