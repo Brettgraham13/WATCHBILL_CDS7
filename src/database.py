@@ -17,8 +17,6 @@ class WatchstanderDB(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
-    check_in_date = Column(DateTime, nullable=False)
-    qualification_date = Column(DateTime, nullable=False)
     is_n_head = Column(Boolean, nullable=False)
     availability_vectors = Column(JSON)  # Store monthly vectors as JSON
 
@@ -52,7 +50,7 @@ def calculate_total_availability(year: int, month: int) -> Tuple[int, Dict[str, 
     session = get_db_session()
     try:
         watchstanders = session.query(WatchstanderDB).all()
-        month_key = f"{year:04d}-{month:02d}"
+        month_key = (year, month)
         total_available = 0
         individual_available = {}
 
